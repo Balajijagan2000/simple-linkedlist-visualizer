@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    font-size: 1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+
+    background-color: #FFFBE9;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9F8772;
+    color: aliceblue;
+    padding: .5em;
+}
+.data {
+    width: 60px;
+    height: 60px;
+    background-color: #F1D3B3;
+    color: #4E6C50;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 0 6px rgba(0,0,0,.2);
+    transition: all .6s ease;
+    opacity: 0;
+}
+.data.fadein {
+    animation: fadein .6s ease forwards;
+
+}  
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+.node {
+
+    display: flex;
+    align-items: center;
+    transform: translate(0,0);
+    opacity: 1;
+    transition: all .3s ease;
+}
+.node.remove {
+    animation: remove .2s ease forwards;
+}
+@keyframes remove {
+    100% {
+
+        transform: translate(0, -100px);
+        opacity: 0;
+    }
+    
+}
+.link {
+    transition: all .6s ease;
+    opacity: 0;
+    transform: translateX(-50px);
+    z-index: -1;
+}
+.link p{
+    font-size: 2.5rem;
+    height: fit-content;
+    margin:auto .2em;
+    
+}
+.link.slidein {
+    animation: slidein .6s .2s ease forwards;
+                                    
+}
+@keyframes slidein {
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+main {
+
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    gap: 5px;
+    
+}
+.ll-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-grow: 3;
+
+    padding: 4rem;
+}
+.menu {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin-right:0;
+    padding: 1rem;
+    background-color: #9F8772;
+    backdrop-filter: blur(5px);
+}
+.menu input[type="number"] {
+    
+    border: none;
+    outline: none;
+    padding: .3em;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: .3em;
+    width: 100%;
+}.menu input[type="number"]:focus {
+    border: 2px solid black;
+}
+.menu button {
+    border: none;
+    outline: none;
+    padding: .3em;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: .3em;
+}
+.form-wrapper {
+    margin: .4em .2em;
+}
+.form-wrapper form{
+    display: flex;
+    min-width: 200px;
+    width: 250px;
+    max-width: 300px;
+    gap: 5px;
+    padding: .7em;
+    border-bottom: .5px solid black;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Linked List Visualizer</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h2>Linked List Visualizer</h2>
+    </header>
+    <main>
+        <div class="ll-wrapper"><div class="node"><div class="data fadein"><p>1</p></div><div class="link slidein"><p>🠒</p></div></div></div>
+        
+        <div class="menu">
+            <h2>Actions</h2>
+            <div class="form-wrapper">
+                <h3>Insert At First</h3>
+                <form class="insert-first">
+                    <input type="number" name="value" placeholder="number" required/>
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+    
+            <div class="form-wrapper">
+                <h3>Insert At Last</h3>
+                <form class="insert-last">
+                    <input type="number" placeholder="number" name="value" required />
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+    
+            <div class="form-wrapper">
+                <h3>Insert At Nth Position</h3>
+                <form class="insert-pos">
+                    <input type="number" placeholder="position" name="position" required min="0" />
+                    <input type="number" placeholder="number" name="value" required />
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+    
+            <div class="form-wrapper">
+                <h3>Delete At Nth Position</h3>
+                <form class="delete-pos">
+                    <input type="number" placeholder="position" name="position" required min="0" />
+                    <button type="submit">Remove</button>
+                </form>
+            </div>
+    
+            <div class="form-wrapper">
+                <h3>Delete First</h3>
+                <form class="delete-first">
+                    <button type="submit">Remove</button>
+                </form>
+            </div>
+    
+            <div class="form-wrapper">
+                <h3>Delete Last</h3>
+                <form class="delete-last">
+                    <button type="submit">Remove</button>
+                </form>
+            </div>
+
+           
+            
+        </div>
+    </main>
+    
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
